@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.smhrd.mapper.MemberMapper">
+    
+    <select id="memberList" resultType="com.smhrd.domain.Members">
+	    select * from mm_member
+	</select>
+	<insert id="memberJoin" parameterType="com.smhrd.domain.Members">
+	    insert into mm_member(m_id, m_pw, m_name, m_gender, m_joindate, m_phone, m_yy, m_mm, m_dd) values(#{m_id}, #{m_pw}, #{m_name}, #{m_gender}, now(), #{m_phone}, #{m_yy}, #{m_mm}, #{m_dd})
+	</insert>
+	<select id="memberLogin" resultType="com.smhrd.domain.Members">
+	    select * from mm_member where m_id = #{m_id} and m_pw = #{m_pw}
+	</select>
+	<select id="memberUpdateList" resultType="com.smhrd.domain.Members">
+	    select m_id, m_pw, m_name, m_gender, m_phone, m_yy, m_mm, m_dd from mm_member where m_id = #{m_id}
+	</select>
+	<update id="memberUpdate" parameterType="com.smhrd.domain.Members">
+	    update mm_member set m_pw=#{m_pw}, m_phone=#{m_phone}, m_yy=#{m_yy}, m_mm=#{m_mm}, m_dd=#{m_dd}
+	    where m_id=#{m_id}
+	</update>
+</mapper>

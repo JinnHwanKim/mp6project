@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.smhrd.mapper.RestPageMapper">
+	
+    <select id="monthList5" resultType="com.smhrd.domain.Popula">
+	    select song_img,song_num,song_title,song_singer from month5
+	</select>
+	
+    <select id="monthList6" resultType="com.smhrd.domain.Popula">
+	    select song_img,song_num,song_title,song_singer from month6
+	</select>
+ 
+    <select id="monthList7" resultType="com.smhrd.domain.Popula">
+	    select song_img,song_num,song_title,song_singer from month7
+	</select>
+    
+</mapper>

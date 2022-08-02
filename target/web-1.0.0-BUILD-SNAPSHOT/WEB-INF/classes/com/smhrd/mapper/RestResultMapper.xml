@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.smhrd.mapper.RestResultMapper">
+    
+	<select id="balgenre" resultType="com.smhrd.domain.Result">
+	    select song_img,song_num,song_title,song_singer,MID(result_score,3,2) as result_score from mm_result where song_genre='발라드' order by r_seq desc limit 15
+	</select>
+	
+	<select id="dancegenre" resultType="com.smhrd.domain.Result">
+	    select song_img,song_num,song_title,song_singer,MID(result_score,3,2) as result_score from mm_result where song_genre='댄스' order by r_seq desc limit 15
+	</select>
+	
+	<select id="rapgenre" resultType="com.smhrd.domain.Result">
+	    select song_img,song_num,song_title,song_singer,MID(result_score,3,2) as result_score from mm_result where song_genre='랩/힙합' order by r_seq desc limit 15
+	</select>
+	 
+	<select id="rockgenre" resultType="com.smhrd.domain.Result">
+	    select song_img,song_num,song_title,song_singer,MID(result_score,3,2) as result_score from mm_result where song_genre='록/메탈' order by r_seq desc limit 15
+	</select>
+	
+	<select id="rnbgenre" resultType="com.smhrd.domain.Result">
+	    select song_img,song_num,song_title,song_singer,MID(result_score,3,2) as result_score from mm_result where song_genre='RBS' order by r_seq desc limit 15
+	</select>
+		
+	<select id="indigenre" resultType="com.smhrd.domain.Result">
+	    select song_img,song_num,song_title,song_singer,MID(result_score,3,2) as result_score from mm_result where song_genre='인디음악' order by r_seq desc limit 15
+	</select>
+	
+	<select id="trotgenre" resultType="com.smhrd.domain.Result">
+	    select song_img,song_num,song_title,song_singer,MID(result_score,3,2) as result_score from mm_result where song_genre='트로트' order by r_seq desc limit 15
+	</select>
+	
+	<select id="elecgenre" resultType="com.smhrd.domain.Result">
+	    select song_img,song_num,song_title,song_singer,MID(result_score,3,2) as result_score from mm_result where song_genre='일렉트로니카' order by r_seq desc limit 15
+	</select>
+
+	<select id="folkgenre" resultType="com.smhrd.domain.Result">
+	    select song_img,song_num,song_title,song_singer,MID(result_score,3,2) as result_score from mm_result where song_genre='포크/블루스' order by r_seq desc limit 15
+	</select>
+			
+</mapper>

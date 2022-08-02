@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Dongle&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@500&display=swap');
+
+
+* {margin: 0; padding: 0; box-sizing: border-box;}
+
+/* 레이아웃 틀 */
+
+
+html {
+    height: 100%;
+}
+
+body {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow-x      : hidden;
+    
+}
+#logo {
+    width: 250px;
+    height: 110px;
+    cursor: pointer;
+}
+
+#header {
+    padding-top: 62px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+#wrapper {
+    position: relative;
+    height: 100%;
+}
+
+#content {
+    font-family: 'IBM Plex Sans KR', sans-serif;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    width: 460px;
+}
+
+
+
+
+/* 입력폼 */
+
+input:focus {
+    outline: none;
+}
+
+
+h3 {
+    margin: 19px 0 8px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+
+.box {
+    display: block;
+    width: 100%;
+    height: 51px;
+    border: solid 1px #dadada;
+    padding: 10px 14px 10px 14px;
+    box-sizing: border-box;
+    background: #fff;
+    position: relative;
+}
+
+.int {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 29px;
+    border: none;
+    background: #fff;
+    font-size: 15px;
+}
+
+input {
+    
+}
+
+.box.int_id {
+    padding-right: 110px;
+}
+
+.box.int_pass {
+    padding-right: 40px;
+}
+
+.box.int_pass_check {
+    padding-right: 40px;
+}
+
+.step_url {
+    /*@naver.com*/
+    position: absolute;
+    top: 16px;
+    right: 13px;
+    font-size: 15px;
+    color: #8e8e8e;
+}
+
+.pswdImg {
+    width: 18px;
+    height: 20px;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    margin-top: -10px;
+    cursor: pointer;
+}
+
+#bir_wrap {
+    display: table;
+    width: 100%;
+}
+
+#bir_yy {
+    display: table-cell;
+    width: 147px;
+    
+}
+
+#bir_mm {
+    display: table-cell;
+    width: 147px;
+    vertical-align: middle;
+}
+
+#bir_dd {
+    display: table-cell;
+    width: 147px;
+}
+
+#bir_mm, #bir_dd {
+    padding-left: 10px;
+}
+
+select {
+    width: 100%;
+    height: 29px;
+    font-size: 15px;
+    background: #fff url(https://static.nid.naver.com/images/join/pc/sel_arr_2x.gif) 100% 50% no-repeat;
+    background-size: 20px 8px;
+    -webkit-appearance: none;
+    display: inline-block;
+    text-align: start;
+    border: none;
+    cursor: default;
+}
+
+/* 에러메세지 */
+
+.error_next_box {
+    margin-top: 9px;
+    font-size: 12px;
+    color: red;    
+    display: none;
+}
+
+#alertTxt {
+    position: absolute;
+    top: 19px;
+    right: 38px;
+    font-size: 12px;
+    color: red;
+    display: none;
+}
+
+/* 버튼 */
+
+.btn_area {
+    width: 150px;
+    margin: auto;
+    margin-top : 50px;
+}
+
+#btnJoin {
+    width : 100%;
+    padding: 20px 0 20px;
+    border: 0;
+    cursor: pointer;
+    color: #fff;
+    background: linear-gradient(50deg,#3494E6,#EC6EAD);
+    font-family: 'IBM Plex Sans KR', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    border-radius: 25px;
+    box-shadow: 0px 6px 6px 0px rgba(37, 24, 24, 0.325);
+}
+
+#btnJoin:hover{
+    background: #B5A3DF;
+}
+
+
+nav{
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    min-height: 8vh;
+    background-color: white;
+    font-family: 'IBM Plex Sans KR', sans-serif;
+    border-bottom: 1px solid gainsboro;
+    padding : auto;
+}
+
+.logo{
+    color: purple;
+    text-transform : uppercase;
+    letter-spacing : 5px;
+    font-size:20px;
+}
+
+.nav-links{
+    display:flex;
+    justify-content: space-around;
+    width: 30%; 
+    border-bottom : 1px solid gainsboro;
+    border-left : 1px solid gainsboro;
+    z-index: 1;
+}
+
+.nav-links li{
+    list-style: none;
+}
+
+.nav-links a{
+    color: black;
+    text-decoration:none;
+    letter-spacing:  3px;
+    font-weight: bold;
+    font-size:16px;
+}
+
+
+
+/* 오른쪽 메뉴 */
+.burger{
+    cursor : pointer;
+}
+
+.burger div{
+    width : 25px;
+    height : 5px;
+    background-color : rgb(30, 28, 28);
+    margin : 5px;
+}
+
+.nav-links{
+    position:absolute;
+    right:0px;  
+    height: 40vh;
+    top: 8vh;
+    background-color: white;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    width: 50%;
+    /* 여백 생성 overflow-x 로 제거 */
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+}
+
+.nav-links li{
+    opacity : 0;
+    }
+    
+    .burger{
+    display : block;
+    }
+    
+    
+    .nav-active{
+    transform: translateX(0%);
+    z-index: 1;
+    }
+    
+    @keyFrames navLinkFade{
+        /* 위에서부터 아래로 진해짐 */ 
+        from{
+            opacity: 1;
+        }
+        to{
+            opacity: 1;
+        }
+    }

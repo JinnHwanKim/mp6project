@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Dongle&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@500&display=swap');
+
+*{
+    margin:0px;
+    box-sizing:border-box;
+}
+
+nav{
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    min-height: 8vh;
+    background-color: white;
+    border-bottom: 1px solid gainsboro;
+    padding : auto;
+}
+
+.logo{
+    color: purple;
+    text-transform : uppercase;
+    letter-spacing : 5px;
+}
+
+.nav-links{
+    display:flex;
+    justify-content: space-around;
+    width: 30%; 
+    border-bottom : 1px solid gainsboro;
+    border-left : 1px solid gainsboro;
+    z-index: 1;
+}
+
+.nav-links li{
+    list-style: none;
+}
+
+.nav-links a{
+    color: black;
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size:16px;
+}
+
+/* 오른쪽 메뉴 */
+.burger{
+    cursor : pointer;
+}
+
+.burger div{
+    width : 25px;
+    height : 5px;
+    background-color : rgb(71, 10, 99);
+    margin : 5px;
+}
+
+body{
+        overflow-x: hidden;
+    }
+.nav-links{
+        position:absolute;
+        right:0px;
+        height: 40vh;
+        top: 8vh;
+        background-color: white;
+        display: flex;
+        flex-direction:column;
+        align-items: center;
+        width: 50%;
+        /* 여백 생성 overflow-x 로 제거 */
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+        font-family: 'IBM Plex Sans KR', sans-serif;
+    }
+
+.nav-links li{
+    opacity : 0;
+}
+
+.burger{
+    display : block;
+}
+
+
+.nav-active{
+    transform: translateX(0%);
+    z-index: 1;
+}
+
+@keyFrames navLinkFade{
+    /* 위에서부터 아래로 진해짐 */ 
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+
+.record {
+    text-align : center;
+    padding : 100px;
+}
+
+.list{
+    font-family: 'Poppins', sans-serif;
+    text-align : center;
+    list-style:none;
+    padding : 0px;
+}
+
+.list li{
+transition: all 0.4s ease 0s;
+}
+
+.list li:hover {
+transform: scale(1.2);
+}
+
+.chartList{
+    margin : 15px auto 15px auto;
+    max-width: 550px;
+    padding : 10px;
+    display: flex;
+    justify-content: center;
+    border-radius: 35px;
+    border : 3px solid rgb(224, 204, 236);
+}
+.chartList div{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.main-profile{
+    cursor: pointer;
+}
+
+.content{
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.thumb, .number, .score, .content-button{
+    width : 55px;
+    height : 55px;
+}
+
+.thumb{
+    overflow: hidden;
+}
+
+.content{
+    width:250px;
+}
+
+.number, .score{
+    padding-top: 11px;
+    font-family: 'IBM Plex Sans KR', sans-serif;
+}
+
+mian-profile {
+    width: auto; 
+    height: auto;
+    max-width: 55px;
+    max-height: 55px;
+}
+
+.profile {
+    border:3px solid rgb(224, 204, 236);
+    width: auto; 
+    height: auto;
+    max-width: 55px;
+    max-height: 55px;
+}
+.play{
+    cursor : pointer;
+    width: auto; height: auto;
+    max-width: 50px;
+    max-height: 50px;
+}
+
+.music-name{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 250px;
+    height: 28px;
+    text-align: left;
+    font-size:20px;
+    border-bottom: 1px solid rgb(224, 204, 236);
+    font-family: 'Dongle', sans-serif;
+}
+.singer{
+    color: rgb(187, 184, 184);
+    float: left;
+    font-size:18px;
+    font-family: 'Dongle', sans-serif;
+}
+
+.hidden{
+    display:none;
+}
+
+
+/* 오늘의 추천곡*/
+.bottom{
+    margin:auto;
+    margin-top:50px;
+    max-width:500px;
+    text-align: center;
+    font-size: 35px;
+    font-family: 'Dongle', sans-serif;
+    border-radius: 1px solid black;
+}
+
+.bottom-first{
+    display:flex; 
+    width:500px; 
+    margin:auto;
+
+}
+
+.fav{
+    padding-right:70px;
+    width:200px; 
+    margin-right:200px;
+}
+
+.mon{
+    text-decoration: none;
+    color:rgb(64, 5, 64);
+    width:50px;
+    font-size: 30px;
+}
+
+.mon:hover{
+    cursor: pointer;
+}
+
+
+.w-btn {
+    position: relative;
+    border: none;
+    display: inline-block;
+    padding: 15px 30px;
+    margin-bottom : 200px;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.25s;
+    border:0;
+    outline:0;
+    font-family: 'CookieRun-Regular';
+}
+
+.w-btn:hover {
+    letter-spacing: 2px;
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+
+.w-btn-gra {
+    background: linear-gradient(-45deg, #33ccff 0%, #ff99cc 100%);
+    color: white;
+}
+
+.is-hidden{
+    display:none;
+}

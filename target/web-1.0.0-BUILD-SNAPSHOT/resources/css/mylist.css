@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Dongle&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@500&display=swap');
+
+
+
+.title{
+    text-align: center;
+    font-size: 50px;
+    padding : 20px 0 20px 0;
+    margin : auto;
+    font-family: 'IBM Plex Sans KR', sans-serif;
+    color : rgb(121, 62, 183);
+}
